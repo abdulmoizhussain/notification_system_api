@@ -1,0 +1,11 @@
+Open project 'web_app' in PyCharm.
+
+File > Settings > Project: web_app > Project Interpreter:
+	Search and Install Flask
+
+Add Configurations:
+	Change 'Script path' to 'Module name', add module name: flask.
+	Add Environment variables: PYTHONUNBUFFERED=1;FLASK_APP=api.py;PYDEVD_USE_FRAME_EVAL=NO
+	Python interpreter: select pc's default installation directory and select python.exe file.
+	check: Add content roots to PYTHONPATH
+	check: Add source roots to PYTHONPATH

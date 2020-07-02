@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+{%block title%} {{title}} {%endblock%}
+{%block body%}
+<div class="container-fluid">
+  <h1>{{title}}</h1>
+  <hr>
+  <div class="container-fluid">
+    <div class="card mb-12">
+      <div class="card-header">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <tbody>
+                {%for single in all%}
+                <tr>
+                  <td>{{single.Time_Stamp and single.Time_Stamp.strftime("%H:%M:%S | %d-%m-%Y")}}</td>
+                </tr>
+                {%endfor%}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  {%endblock%}
+  {%block scripts%}
+  <script>
+    // $("#example").dataTable().fnDestroy();
+    $('#dataTable thead tr').clone(true).appendTo('#dataTable thead');
+    $('#dataTable').DataTable({
+      initComplete: function () {
+        this.api().columns().every(function () {
+          var column = this;
+          var select = $('<select><option value=""></option></select>').appendTo($(column.header()).empty());
+          select.on('change', function () {
+            var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+            column.search(val ? '^' + val + '$' : '', true, false).draw();
+          });
+
+          column.data().unique().sort().each(function (d) { !!d.trim() && select.append('<option value="' + d + '">' + d + '</option>') });
+        });
+      }
+    });
+    
+    var timestampCOLUMN = $('#dataTable thead tr th').get(13); // 13-th is the timestamp column
+    timestampCOLUMN.click();
+    timestampCOLUMN.click();
+  </script>
+  {%endblock%}

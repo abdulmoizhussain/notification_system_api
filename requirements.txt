@@ -1,0 +1,14 @@
+Flask
+Flask-HTTPAuth
+Flask-SQLAlchemy
+flask_marshmallow
+python-dateutil
+passlib
+SQLAlchemy
+Werkzeug
+flask-jwt-extended
+flask_script
+flask_socketio
+flask_migrate
+greenlet
+eventlet

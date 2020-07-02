@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{%block title%} Dashboard {%endblock%}
+{%block body%}
+<style>
+  @keyframes ants {
+    to {
+      background-position: 100% 100%
+    }
+  }
+
+  .marching-ants {
+    border: 8px solid transparent;
+    animation: ants 12s linear infinite;
+    background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, white 0, red 25%, transparent 0, transparent 50%) 0 / .6em .6em;
+  }
+
+  .card-body-icon>* {
+    opacity: 0.5 !important;
+  }
+
+  .clearfix {
+    color: black;
+  }
+</style>
+{%endblock%}
+
+{%block scripts%}
+<script src="/static/js/common.js"></script>
+<script>
+  tests_row_container.append("<div>");
+
+  asd.find("#state").html("<div>");
+  asd.find("#child_container").addClass("<div>");
+  asd.find("#child_container").removeClass("<div>");
+  $(".bootstrap-card-container").attr('class', function (_, c) { });
+</script>
+{%endblock%}

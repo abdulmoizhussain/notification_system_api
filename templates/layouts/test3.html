@@ -1,0 +1,113 @@
+{% extends 'base.html'%}
+{%block title%} {{title}} {%endblock%}
+{%block body%}
+<div class="container-fluid">
+    <h1>{{title}}</h1>
+    <hr>
+    <div class="container-fluid">
+        <div class="card mb-12">
+            <div class="card-header"><a href="{{url_for('.test', action='test')}}">{{title}}</a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered display" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>&nbsp;&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>&nbsp;&nbsp;</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{%endblock%}
+{%block scripts%}
+<script>
+    function deletetest(self) {
+        $.ajax({
+            type: "DELETE",
+            url: "/api/test/remove",
+            data: JSON.stringify({
+                'id': $(self).attr("data-id"),
+                'access_token': localStorage.getItem("token"),
+            }),
+            contentType: "application/json",
+            dataType: 'json',
+            success: function (resp) {
+                alert(resp.msg);
+                location.reload();
+            },
+            error: function (resp) {
+                alert(resp.msg)
+            }
+        });
+    }
+
+    var data = null;
+    var table = $('#dataTable').DataTable({
+        ajax: function (data, callback, settings) {
+            $.ajax({
+                url: "/api/test/get_all",
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify({ "access_token": localStorage.getItem("token") })
+            }).then(function (json) {
+                data = { data: json.tests };
+                callback(data);
+            }).catch(function (error) {
+                callback({ data: [] });
+            });
+        },
+        pageLength: 10,
+        columns: [
+            { "data": null, "className": 'details-control', "orderable": false, "defaultContent": '' },
+            { "data": "Name" },
+            { "render": function (data, type, full, meta) { return `<a href="/test/${data.id}"><i class="fas fa-edit" style="color:orange;"></i></a>`; }, "data": null, "className": "text-center" },
+        ],
+        order: [[1, 'asc']],
+    });
+    $('#dataTable tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row(tr);
+        if (row.child.isShown()) {
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            row.child(format(row.data())).show();
+            tr.addClass('shown');
+        }
+    });
+
+    function format(d) {
+        if (!d.children || d.children.length < 1) {
+            return "<div class='text-center'>asdf.</div>";
+        }
+        return `<table width="100%" cellspacing="0" class='display'>
+      <thead>
+        <tr>
+          <th>asdfdsaf</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        ${d.children.map(function (v) {
+            return `<tr>
+            <td>${v.Name}</td>
+            <td class="text-center"><a data-id="${v.id}" title="${v.id}" onclick="asdf(this)"><i class="fas fa-trash" style="color:red;"></i></a></td>
+          </tr>`;
+        })}
+      </tbody>
+    </table>`;
+    }
+</script>
+{%endblock%}

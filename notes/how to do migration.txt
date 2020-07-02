@@ -1,0 +1,10 @@
+For database migrations, not following flask's method. { Encountered reason(s): ERROR [root] Error: No support for ALTER of constraints in SQLite dialect }
+Instead, whenver there is change in schema:
+1) first export "db.sqlite" (database) from "DB Browser for SQLite" software, as "Database to SQL file..."
+2) backup then delete "db.sqlite" file
+3) run migrations:
+    # Delete 'migrations' foler then:
+    python migrate.py db init
+    python migrate.py db migrate
+    python migrate.py db upgrade
+4) Now, insert old data into newly created "db.sqlite" file.

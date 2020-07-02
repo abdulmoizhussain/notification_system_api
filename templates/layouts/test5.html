@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{%block title%} {{title}} {%endblock%}
+{%block body%}
+<div class="container"></div>
+{%endblock%}
+
+{%block scripts%}
+<script>
+  $(function () {
+    "{%if test%}"
+    $('#test option[value="{{test}}"]').attr("selected", "selected");
+    ele.trigger("change");
+    $('#test').find(":selected").attr("id");
+    "{%else%}"
+    "{%endif%}"
+  });
+</script>
+{%endblock%}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%block title%} {{title}} {%endblock%}
+{%block body%}
+<div class="container-fluid">
+  <h1>{{title}}</h1>
+  <hr>
+  <div class="container-fluid">
+    <div class="card mb-12">
+      <div class="card-header">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <tbody>
+              {%for d in data%}
+              <tr>
+                <td>{{d.id}}</td>
+                <td>{{d.Name}}</td>
+                <td class="text-center"><a href="{{url_for('.test',action='get', id=d.id)}}">GoTo</a></td>
+              </tr>
+              {%endfor%}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{%endblock%}
+{%block scripts%}
+<script>
+</script>
+{%endblock%}

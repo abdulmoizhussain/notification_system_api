@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=test-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Notification System - {%block title%} {%endblock%}</title>
+
+    <!-- /favicon -->
+    <link rel="shortcut icon" type="image/png" href="/static/favicon.png">
+
+    <!-- Bootstrap core CSS-->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <div id="wrapper">
+        <ul class="sidebar navbar-nav toggled">
+            {%if ACCESS >= 2%}
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('.new_tests')}}">
+                    <i class="fas fa-fw fas fa-users"></i>
+                    <span>tests</span></a>
+            </li>
+            {%endif%}
+        </ul>
+
+        {% block body%}
+        {%endblock%}
+    </div>
+    <!-- /.content-wrapper -->
+    </div>
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    {%block scripts%}
+    {%endblock%}
+    <script>
+        $(function () {
+            const socket = io.connect('http://' + document.domain + ':' + location.port + namespace, { transport: 'websocket', forceNew: true });
+            socket.on("test_event", function (test_msg) {
+                $.notify(test_msg, { position: "top center", style: 'bootstrap' });
+            });
+        });
+    </script>
+    </body>
+
+</html>
