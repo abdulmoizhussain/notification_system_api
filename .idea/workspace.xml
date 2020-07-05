@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c02dadc0-4683-437f-b553-f4834d6daf69" name="Default Changelist" comment="" />
+    <list default="true" id="3ab08aff-5df5-41ee-a42e-0319c3bd1473" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/repository/user_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/startup_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Abdul.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Abdul.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flask_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/AppRole.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/AppRole.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/models/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/models/User.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,43 +51,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1e7fmWMvXFZrDf7D1XeLs4FTL4n" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1eEeqSu1PcEPoxK1xF08GuVW3lX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Abdul\Documents\Development\flask_app\repository\models" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api.py" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration name="flask" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="api" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="flask_app" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="FLASK_APP" value="api.py" />
+        <env name="DEBUG" value="True" />
+        <env name="FLASK_ENV" value="development" />
+        <env name="FLASK_DEBUG" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\Abdul\Documents\Development\flask_app\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="flask" />
-      <option name="PARAMETERS" value="run --host=0.0.0.0 --port=5000" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="true" />
+      <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
@@ -64,67 +98,58 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c02dadc0-4683-437f-b553-f4834d6daf69" name="Default Changelist" comment="" />
-      <created>1593677711272</created>
+      <changelist id="3ab08aff-5df5-41ee-a42e-0319c3bd1473" name="Default Changelist" comment="" />
+      <created>1593891369992</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1593677711272</updated>
+      <updated>1593891369992</updated>
     </task>
     <servers />
   </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/.." />
-    </ignored-roots>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="520" y="247" width="440" height="274" key="#Notifications" timestamp="1593703607425">
+    <state x="89" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593897195070">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="520" y="247" width="440" height="274" key="#Notifications/0.0.1271.768@0.0.1271.768" timestamp="1593703607425" />
-    <state x="89" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593712663395">
+    <state x="89" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1271.768@0.0.1271.768" timestamp="1593897195070" />
+    <state x="502" y="139" width="400" height="489" key="EnvironmentVariablesDialog" timestamp="1593893701732">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="89" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1271.768@0.0.1271.768" timestamp="1593712663395" />
-    <state x="365" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593710447737">
+    <state x="502" y="139" width="400" height="489" key="EnvironmentVariablesDialog/0.0.1271.768@0.0.1271.768" timestamp="1593893701732" />
+    <state x="682" y="181" key="FileChooserDialogImpl" timestamp="1593896884306">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="365" y="131" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1271.768@0.0.1271.768" timestamp="1593710447737" />
-    <state x="415" y="139" key="FileChooserDialogImpl" timestamp="1593712660814">
+    <state x="682" y="181" key="FileChooserDialogImpl/0.0.1271.768@0.0.1271.768" timestamp="1593896884306" />
+    <state width="1250" height="246" key="GridCell.Tab.0.bottom" timestamp="1593900639631">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="415" y="139" key="FileChooserDialogImpl/0.0.1271.768@0.0.1271.768" timestamp="1593712660814" />
-    <state width="1250" height="66" key="GridCell.Tab.0.bottom" timestamp="1593715040522">
+    <state width="1250" height="246" key="GridCell.Tab.0.bottom/0.0.1271.768@0.0.1271.768" timestamp="1593900639631" />
+    <state width="1250" height="246" key="GridCell.Tab.0.center" timestamp="1593900639630">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="66" key="GridCell.Tab.0.bottom/0.0.1271.768@0.0.1271.768" timestamp="1593715040522" />
-    <state width="1250" height="66" key="GridCell.Tab.0.center" timestamp="1593715040522">
+    <state width="1250" height="246" key="GridCell.Tab.0.center/0.0.1271.768@0.0.1271.768" timestamp="1593900639630" />
+    <state width="1250" height="246" key="GridCell.Tab.0.left" timestamp="1593900639630">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="66" key="GridCell.Tab.0.center/0.0.1271.768@0.0.1271.768" timestamp="1593715040522" />
-    <state width="1250" height="66" key="GridCell.Tab.0.left" timestamp="1593715040522">
+    <state width="1250" height="246" key="GridCell.Tab.0.left/0.0.1271.768@0.0.1271.768" timestamp="1593900639630" />
+    <state width="1250" height="246" key="GridCell.Tab.0.right" timestamp="1593900639630">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="66" key="GridCell.Tab.0.left/0.0.1271.768@0.0.1271.768" timestamp="1593715040522" />
-    <state width="1250" height="66" key="GridCell.Tab.0.right" timestamp="1593715040522">
+    <state width="1250" height="246" key="GridCell.Tab.0.right/0.0.1271.768@0.0.1271.768" timestamp="1593900639630" />
+    <state x="136" y="29" key="SettingsEditor" timestamp="1593895830017">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="66" key="GridCell.Tab.0.right/0.0.1271.768@0.0.1271.768" timestamp="1593715040522" />
-    <state x="136" y="29" key="SettingsEditor" timestamp="1593714921849">
-      <screen x="0" y="0" width="1271" height="768" />
-    </state>
-    <state x="136" y="29" key="SettingsEditor/0.0.1271.768@0.0.1271.768" timestamp="1593714921849" />
-    <state x="686" y="0" width="585" height="768" key="find.popup" timestamp="1593712722883">
-      <screen x="0" y="0" width="1271" height="768" />
-    </state>
-    <state x="686" y="0" width="585" height="768" key="find.popup/0.0.1271.768@0.0.1271.768" timestamp="1593712722883" />
-    <state x="300" y="172" key="git4idea.merge.GitPullDialog" timestamp="1593714828786">
-      <screen x="0" y="0" width="1271" height="768" />
-    </state>
-    <state x="300" y="172" key="git4idea.merge.GitPullDialog/0.0.1271.768@0.0.1271.768" timestamp="1593714828786" />
-    <state x="437" y="290" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1593714723754">
-      <screen x="0" y="0" width="1271" height="768" />
-    </state>
-    <state x="437" y="290" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1271.768@0.0.1271.768" timestamp="1593714723754" />
+    <state x="136" y="29" key="SettingsEditor/0.0.1271.768@0.0.1271.768" timestamp="1593895830017" />
   </component>
 </project>

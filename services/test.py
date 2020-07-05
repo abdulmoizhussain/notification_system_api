@@ -1,7 +1,7 @@
 from flask import request, jsonify, abort
 from datetime import timedelta as _timedelta, datetime as _datetime
 from flask_jwt_extended import get_jwt_identity, jwt_required
-from services.auth import required_access_levels
+from services.auth import required_app_role
 from common.methods import props_required
 from common import AppRole as _AppRole
 from sqlalchemy import and_, desc
@@ -9,7 +9,7 @@ from application import Socket as _Socket
 
 
 @jwt_required
-@required_access_levels(_AppRole.TEACHER, _AppRole.ADMIN)
+@required_app_role(_AppRole.Admin, _AppRole.Teacher)
 @props_required("test", "test")
 def add():
     test = request.json.get('test')
