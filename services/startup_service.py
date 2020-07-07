@@ -1,7 +1,7 @@
 import os as _os
 from application import db as _db
 from repository import user_repository as _user_repository
-from common import AppRole as _AppRole
+from common.AppRole import AppRole as _AppRole
 
 
 def initialize_default_values():

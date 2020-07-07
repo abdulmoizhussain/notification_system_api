@@ -3,7 +3,7 @@ from datetime import timedelta as _timedelta, datetime as _datetime
 from flask_jwt_extended import get_jwt_identity, jwt_required
 from services.auth import required_app_role
 from common.methods import props_required
-from common import AppRole as _AppRole
+from common.AppRole import AppRole as _AppRole
 from sqlalchemy import and_, desc
 from application import Socket as _Socket
 
@@ -44,8 +44,8 @@ def add():
 
 def get_test_details(test_to_fetch, test=None):
     test_test = test_test \
-        .filter(and_(test.test_Id == tests.id, test_to_fetch == tests.id)) \
-        .add_columns(tests.id.label("test_id"))
+        .filter(and_(test.test_Id == tests.Id, test_to_fetch == tests.Id)) \
+        .add_columns(tests.Id.label("test_id"))
     test = Test.query.get(tes.test_id) = Tests.query \
         .filter(Tests.test_Name.is_(test.Name)) \
         .order_by(desc(Tests.Time_Stamp)) \
@@ -54,16 +54,3 @@ def get_test_details(test_to_fetch, test=None):
         .filter(and_(Test.Column1.is_(test.Column2), Test.Column3.isnot(None))) \
         .order_by(desc(Tests.Time_Stamp)) \
         .first()
-
-
-def _parse_int(n):
-    try:
-        return int(float(n))
-    except ValueError:
-        return int(0)
-
-
-from application import app
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy(app)
