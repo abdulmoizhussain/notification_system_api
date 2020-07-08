@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy
 from flask_socketio import SocketIO as _SocketIO
 
 _access_token_expiry = _timedelta(hours=6)
+_refresh_token_expiry = _timedelta(hours=12)
 
 app = _Flask(__name__)
 
@@ -13,7 +14,7 @@ app.secret_key = "application-secret-key"
 app.config['JWT_SECRET_KEY'] = "application-secure-key"
 app.config['JWT_TOKEN_LOCATION'] = ['headers']
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = _access_token_expiry
-app.config['JWT_REFRESH_TOKEN_EXPIRES'] = _access_token_expiry
+app.config['JWT_REFRESH_TOKEN_EXPIRES'] = _refresh_token_expiry
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 

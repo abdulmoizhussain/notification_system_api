@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ab08aff-5df5-41ee-a42e-0319c3bd1473" name="Default Changelist" comment="added schema till ClassTimetable.py. remaining ones: ClassTimetablePlacement, Event, Notification, Attendance, Complaint.">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/Attendance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Abdul.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Abdul.xml" afterDir="false" />
+    <list default="true" id="3ab08aff-5df5-41ee-a42e-0319c3bd1473" name="Default Changelist" comment="--added Attendance.py Table.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594147402068</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="--added Attendance.py Table.">
+      <created>1594234076070</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594234076070</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,7 +138,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added user table." />
     <MESSAGE value="added schema till ClassTimetable.py. remaining ones: ClassTimetablePlacement, Event, Notification, Attendance, Complaint." />
-    <option name="LAST_COMMIT_MESSAGE" value="added schema till ClassTimetable.py. remaining ones: ClassTimetablePlacement, Event, Notification, Attendance, Complaint." />
+    <MESSAGE value="--added Attendance.py Table." />
+    <option name="LAST_COMMIT_MESSAGE" value="--added Attendance.py Table." />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="62" key="#Inspections" timestamp="1594233914652">
@@ -174,14 +180,14 @@
     <state x="104" y="23" width="916" height="708" key="SettingsEditor/0.0.1271.768/1366.-239.1600.870@0.0.1271.768" timestamp="1594231681539" />
     <state x="1643" y="-112" width="998" height="708" key="SettingsEditor/0.0.1271.768/1366.-239.1600.870@1366.-239.1600.870" timestamp="1594231614429" />
     <state x="136" y="29" key="SettingsEditor/0.0.1271.768@0.0.1271.768" timestamp="1594233859386" />
-    <state x="227" y="117" key="Vcs.Push.Dialog.v2" timestamp="1594147459643">
+    <state x="227" y="117" key="Vcs.Push.Dialog.v2" timestamp="1594234082574">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="227" y="117" key="Vcs.Push.Dialog.v2/0.0.1271.768@0.0.1271.768" timestamp="1594147459643" />
-    <state x="343" y="117" width="585" height="534" key="find.popup" timestamp="1593946641118">
+    <state x="227" y="117" key="Vcs.Push.Dialog.v2/0.0.1271.768@0.0.1271.768" timestamp="1594234082574" />
+    <state x="343" y="117" width="650" height="534" key="find.popup" timestamp="1594234193635">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="343" y="117" width="585" height="534" key="find.popup/0.0.1271.768@0.0.1271.768" timestamp="1593946641118" />
+    <state x="343" y="117" width="650" height="534" key="find.popup/0.0.1271.768@0.0.1271.768" timestamp="1594234193635" />
     <state x="298" y="89" width="673" height="679" key="search.everywhere.popup" timestamp="1594231625210">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
