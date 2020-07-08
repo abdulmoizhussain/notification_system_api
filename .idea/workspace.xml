@@ -19,28 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ab08aff-5df5-41ee-a42e-0319c3bd1473" name="Default Changelist" comment="added user table.">
-      <change afterPath="$PROJECT_DIR$/common/Gender.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/ClassTimetable.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/Course.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/Department.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/Semester.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/Student.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/Teacher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/TimeSlot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/WeekDay.py" afterDir="false" />
+    <list default="true" id="3ab08aff-5df5-41ee-a42e-0319c3bd1473" name="Default Changelist" comment="added schema till ClassTimetable.py. remaining ones: ClassTimetablePlacement, Event, Notification, Attendance, Complaint.">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/models/Attendance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Abdul.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Abdul.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/AppRole.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/AppRole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderers/rTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/renderers/rTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/models/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/models/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/models/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/models/User.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/user_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/startup_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/startup_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/user_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +52,10 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/api.py" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.splitter.proportion" value="0.22403258" />
   </component>
   <component name="RunManager">
     <configuration name="api" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -117,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593943254523</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added schema till ClassTimetable.py. remaining ones: ClassTimetablePlacement, Event, Notification, Attendance, Complaint.">
+      <created>1594147402068</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594147402068</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,9 +132,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added user table." />
-    <option name="LAST_COMMIT_MESSAGE" value="added user table." />
+    <MESSAGE value="added schema till ClassTimetable.py. remaining ones: ClassTimetablePlacement, Event, Notification, Attendance, Complaint." />
+    <option name="LAST_COMMIT_MESSAGE" value="added schema till ClassTimetable.py. remaining ones: ClassTimetablePlacement, Event, Notification, Attendance, Complaint." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="261" y="62" key="#Inspections" timestamp="1594233914652">
+      <screen x="0" y="0" width="1271" height="768" />
+    </state>
+    <state x="261" y="62" key="#Inspections/0.0.1271.768@0.0.1271.768" timestamp="1594233914652" />
     <state x="89" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593897195070">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
@@ -171,21 +168,25 @@
       <screen x="0" y="0" width="1271" height="768" />
     </state>
     <state width="1250" height="242" key="GridCell.Tab.0.right/0.0.1271.768@0.0.1271.768" timestamp="1593981053605" />
-    <state x="136" y="29" key="SettingsEditor" timestamp="1594140476543">
+    <state x="136" y="29" width="916" height="708" key="SettingsEditor" timestamp="1594233859386">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="136" y="29" key="SettingsEditor/0.0.1271.768@0.0.1271.768" timestamp="1594140476543" />
-    <state x="227" y="117" key="Vcs.Push.Dialog.v2" timestamp="1593943295707">
+    <state x="104" y="23" width="916" height="708" key="SettingsEditor/0.0.1271.768/1366.-239.1600.870@0.0.1271.768" timestamp="1594231681539" />
+    <state x="1643" y="-112" width="998" height="708" key="SettingsEditor/0.0.1271.768/1366.-239.1600.870@1366.-239.1600.870" timestamp="1594231614429" />
+    <state x="136" y="29" key="SettingsEditor/0.0.1271.768@0.0.1271.768" timestamp="1594233859386" />
+    <state x="227" y="117" key="Vcs.Push.Dialog.v2" timestamp="1594147459643">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="227" y="117" key="Vcs.Push.Dialog.v2/0.0.1271.768@0.0.1271.768" timestamp="1593943295707" />
+    <state x="227" y="117" key="Vcs.Push.Dialog.v2/0.0.1271.768@0.0.1271.768" timestamp="1594147459643" />
     <state x="343" y="117" width="585" height="534" key="find.popup" timestamp="1593946641118">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
     <state x="343" y="117" width="585" height="534" key="find.popup/0.0.1271.768@0.0.1271.768" timestamp="1593946641118" />
-    <state x="298" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1593945316471">
+    <state x="298" y="89" width="673" height="679" key="search.everywhere.popup" timestamp="1594231625210">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
+    <state x="298" y="89" width="673" height="679" key="search.everywhere.popup/0.0.1271.768/1366.-239.1600.870@0.0.1271.768" timestamp="1594231625210" />
+    <state x="1741" y="-138" width="846" height="769" key="search.everywhere.popup/0.0.1271.768/1366.-239.1600.870@1366.-239.1600.870" timestamp="1594231520085" />
     <state x="298" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1271.768@0.0.1271.768" timestamp="1593945316471" />
   </component>
 </project>

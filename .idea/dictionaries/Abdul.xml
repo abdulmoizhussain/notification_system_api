@@ -2,6 +2,7 @@
   <dictionary name="Abdul">
     <words>
       <w>jsonify</w>
+      <w>sqlalchemy</w>
       <w>tablename</w>
     </words>
   </dictionary>
