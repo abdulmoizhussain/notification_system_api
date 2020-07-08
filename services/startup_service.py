@@ -16,10 +16,6 @@ def initialize_default_values():
         _user_repository.create_one(
             "admin",
             "admin",
-            "Admin",
             _AppRole.Admin,
-            None,
-            None,
-            None,
         )
     del admin_user

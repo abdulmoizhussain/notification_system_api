@@ -8,7 +8,13 @@ from flask_socketio import SocketIO as _SocketIO
 _access_token_expiry = _timedelta(hours=6)
 _refresh_token_expiry = _timedelta(hours=12)
 
-app = _Flask(__name__)
+# https://stackoverflow.com/a/42791810/8075004
+app = _Flask(
+    __name__,
+    static_url_path='',
+    static_folder='templates',
+    template_folder='templates'
+)
 
 app.secret_key = "application-secret-key"
 app.config['JWT_SECRET_KEY'] = "application-secure-key"
