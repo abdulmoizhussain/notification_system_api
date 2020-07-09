@@ -17,9 +17,9 @@ def props_required(*json_props):
     def inner_function(function):
         @_wraps(function)
         def wrapper():
-            content_type = _request.headers.get("Content-Type")
-            if not content_type or type(content_type) is not str or content_type.lower().strip() != "application/json":
-                return _jsonify({"msg": "Missing request header: 'Content-Type': 'application/json'"}), 400
+            content_type: str = _request.headers.get("Content-Type")
+            if not content_type or type(content_type) is not str or "application/json" not in content_type.lower().strip():
+                return _jsonify({"msg": "Missing request header: 'Content-Type': 'application/json; charset=utf-8'"}), 400
             del content_type
             m_props = ""  # missing props
             for arg in json_props:

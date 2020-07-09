@@ -1,17 +1,17 @@
-from flask import \
-    request, jsonify as _jsonify, g as _local_proxy
-# session,\
+from flask import request, jsonify as _jsonify, g as _local_proxy
 from repository.models.User import User as _User
 from flask_jwt_extended import jwt_refresh_token_required, get_jwt_identity
 from flask_httpauth import HTTPBasicAuth
-from common.methods import props_required, wraps
+from common.methods import props_required
 from common.AppRole import AppRole as _AppRole
 from repository import user_repository as _user_repository
+from functools import wraps as _wraps
 
-auth = HTTPBasicAuth()
+_auth = HTTPBasicAuth()
 
 
 # def get_access():
+#     from flask import session
 #     return session[KEYS.TEST_ACCESS_LEVEL] if KEYS.TEST_ACCESS_LEVEL in session else ACCESS.Default
 
 
@@ -19,10 +19,6 @@ auth = HTTPBasicAuth()
 def login():
     username: str = request.json.get('username')
     password: str = request.json.get('password')
-    user_roll: int = request.json.get('user_roll')
-
-    if not _AppRole.is_valid(user_roll):
-        return _jsonify({"msg": "user_roll does not exists."}), 400
 
     user = _user_repository.get_one_by_username(username)
 
@@ -30,20 +26,20 @@ def login():
         return _jsonify({"msg": "Invalid credentials."}), 401
 
     # session[KEYS.TEST_ACCESS_LEVEL] = user.UserRole
-    token_response = user.generate_authorization_tokens()
-    return token_response
+    token_object = user.generate_authorization_tokens()
+    return _jsonify(token_object)
 
 
-@auth.verify_password
-def verify_password(testname_or_token, password):
-    user = _User.query.filter(testname=testname_or_token).first()
+@_auth.verify_password
+def verify_password(username_or_token, password):
+    user = _User.query.filter(testname=username_or_token).first()
     if not user or not user.verify_password(password):
         return False
     _local_proxy.user = user
     return True
 
 
-@auth.login_required
+@_auth.login_required
 def get_auth_token():
     token = _local_proxy.user.generate_authorization_tokens()
     return _jsonify(token)
@@ -58,7 +54,7 @@ def refresh_token():
 
 def required_app_role(*access_levels):
     def inner_function(function):
-        @wraps(function)
+        @_wraps(function)
         def wrapper():
             authorized = False
             test = _User.query.get(get_jwt_identity())
@@ -67,7 +63,7 @@ def required_app_role(*access_levels):
                     authorized = True
                     break
             if not authorized:
-                return _jsonify({"msg": "Test %s is unauthorized." % test.testname}), 401
+                return _jsonify({"msg": "User %s is unauthorized." % test.testname}), 401
             return function()
 
         return wrapper

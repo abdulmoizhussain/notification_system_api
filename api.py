@@ -1,7 +1,7 @@
 import os as _os
 from flask import render_template as _render_template, Response as _Response
 from application import app as _app, Socket as _Socket
-from services import startup_service as _startup_service
+from services import startup_service as _startup_service, auth as _auth_service
 # https://stackoverflow.com/a/21755201/8075004
 from mimetypes import guess_type as _guess_mime_type
 
@@ -11,12 +11,15 @@ from mimetypes import guess_type as _guess_mime_type
 @_app.route("/signin")
 @_app.route("/login")
 def sign_in():
-    # pass
     return _render_template(r'base.html', title="title")
     # return _render_template(r'layouts/test.html', title="title")
 
 
 # api endpoints
+_app.add_url_rule("/api/login", "login", _auth_service.login, methods=["POST"])
+_app.add_url_rule("/api/token/refresh", "token_refresh", _auth_service.refresh_token, methods=["GET"])
+
+
 # _app.add_url_rule("/api/user", "new_user", _startup_service, methods=["POST"])
 
 # _app.add_url_rule("/api/test", "new_test", test_api, methods=["POST"])
@@ -57,4 +60,4 @@ def tester(path):
 if __name__ == "__main__":
     _startup_service.initialize_default_values()
     # _app.run(debug=True, host="0.0.0.0", port=5000)
-    _Socket.io.run(_app, host="0.0.0.0", port=5000, debug=True, use_reloader=False)
+    _Socket.io.run(_app, host="0.0.0.0", port=5000, debug=True, use_reloader=True)

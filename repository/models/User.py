@@ -9,7 +9,7 @@ from common.AppRole import AppRole as _AppRole
 class User(_db.Model):
     __tablename__ = 'User'
     Id = _sql.Column(_sql.Integer, primary_key=True, autoincrement=True)
-    Username = _sql.Column(_sql.String, nullable=False, unique=False)
+    Username = _sql.Column(_sql.String, nullable=False, unique=True)
     PasswordHash = _sql.Column(_sql.String, nullable=False)
     UserRole = _sql.Column(_sql.Integer, nullable=False)
     Timestamp = _sql.Column(_sql.DateTime(timezone=True), index=True, default=_sql.func.now())
