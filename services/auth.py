@@ -2,7 +2,7 @@ from flask import request, jsonify as _jsonify, g as _local_proxy
 from repository.models.User import User as _User
 from flask_jwt_extended import jwt_refresh_token_required, get_jwt_identity
 from flask_httpauth import HTTPBasicAuth
-from common.methods import props_required
+from common.helpers import props_required
 from common.AppRole import AppRole as _AppRole
 from repository import user_repository as _user_repository
 from functools import wraps as _wraps

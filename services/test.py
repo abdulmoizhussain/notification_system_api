@@ -2,7 +2,7 @@ from flask import request, jsonify, abort
 from datetime import timedelta as _timedelta, datetime as _datetime
 from flask_jwt_extended import get_jwt_identity, jwt_required
 from services.auth import required_app_role
-from common.methods import props_required
+from common.helpers import props_required
 from common.AppRole import AppRole as _AppRole
 from sqlalchemy import and_, desc
 from application import Socket as _Socket

@@ -6,27 +6,32 @@ from common.AppRole import AppRole as _AppRole
 
 def initialize_default_values():
     if not _os.path.exists("db.sqlite"):
-        # noinspection PyUnresolvedReferences
-        from repository.models.User import User
-        # noinspection PyUnresolvedReferences
-        from repository.models.WeekDay import WeekDay
-        # noinspection PyUnresolvedReferences
-        from repository.models.TimeSlot import TimeSlot
-        # noinspection PyUnresolvedReferences
-        from repository.models.Teacher import Teacher
-        # noinspection PyUnresolvedReferences
-        from repository.models.Student import Student
-        # noinspection PyUnresolvedReferences
-        from repository.models.Semester import Semester
-        # noinspection PyUnresolvedReferences
-        from repository.models.Department import Department
-        # noinspection PyUnresolvedReferences
-        from repository.models.Course import Course
-        # noinspection PyUnresolvedReferences
-        from repository.models.ClassTimetable import ClassTimetable
-        _db.create_all()
-        _db.session.commit()
+        _create_database()
 
+    _add_default_admin_user()
+    _add_semester_names()
+    _add_week_days()
+    _add_time_slots()
+
+
+# noinspection PyUnresolvedReferences
+def _create_database():
+    from repository.models.User import User
+    from repository.models.WeekDay import WeekDay
+    from repository.models.TimeSlot import TimeSlot
+    from repository.models.Teacher import Teacher
+    from repository.models.Student import Student
+    from repository.models.Semester import Semester
+    from repository.models.Department import Department
+    from repository.models.Course import Course
+    from repository.models.ClassTimetable import ClassTimetable
+    from repository.models.Event import Event
+    from repository.models.Notification import Notification
+    _db.create_all()
+    _db.session.commit()
+
+
+def _add_default_admin_user():
     admin_user = _user_repository.get_one_admin_by_username("admin")
     if admin_user is None:
         _user_repository.create_one(
@@ -34,12 +39,9 @@ def initialize_default_values():
             "admin",
             _AppRole.Admin,
         )
-    del admin_user
-
-    add_semester_names()
 
 
-def add_semester_names():
+def _add_semester_names():
     s1 = _semester_repository.get_one_by_name('Semester 1')
     if not s1:
         _semester_repository.create_one('Semester 1')
@@ -64,3 +66,11 @@ def add_semester_names():
     s8 = _semester_repository.get_one_by_name('Semester 8')
     if not s8:
         _semester_repository.create_one('Semester 8')
+
+
+def _add_week_days():
+    pass
+
+
+def _add_time_slots():
+    pass

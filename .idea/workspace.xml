@@ -20,9 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ab08aff-5df5-41ee-a42e-0319c3bd1473" name="Default Changelist" comment="--added default users and semesters.">
-      <change beforePath="$PROJECT_DIR$/.idea/flask_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/notification_system_api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/NotificationType.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/models/Event.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/models/Notification.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/models/Test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/startup_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/startup_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,38 +59,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.22403258" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Abdul\Documents\Development\flask_app\common" />
       <recent name="C:\Users\Abdul\Documents\Development\flask_app\repository" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="notification_system_api" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="api" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="notification_system_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,49 +94,6 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="notification_system_api" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="notification_system_api" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="notification_system_api" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
   </component>
@@ -206,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594314898635</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="--updated proper project name.">
+      <created>1594394529186</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594394529186</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,17 +185,18 @@
     <MESSAGE value="--separated refresh token expiry from access token." />
     <MESSAGE value="--static file settings. and added bootstrap files." />
     <MESSAGE value="--added default users and semesters." />
-    <option name="LAST_COMMIT_MESSAGE" value="--added default users and semesters." />
+    <MESSAGE value="--updated proper project name." />
+    <option name="LAST_COMMIT_MESSAGE" value="--updated proper project name." />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="62" key="#Inspections" timestamp="1594233914652">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
     <state x="261" y="62" key="#Inspections/0.0.1271.768@0.0.1271.768" timestamp="1594233914652" />
-    <state x="89" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593897195070">
+    <state x="89" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594404259229">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="89" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1271.768@0.0.1271.768" timestamp="1593897195070" />
+    <state x="89" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1271.768@0.0.1271.768" timestamp="1594404259229" />
     <state x="502" y="139" width="400" height="489" key="EnvironmentVariablesDialog" timestamp="1593893701732">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
@@ -253,22 +205,22 @@
       <screen x="0" y="0" width="1271" height="768" />
     </state>
     <state x="682" y="181" key="FileChooserDialogImpl/0.0.1271.768@0.0.1271.768" timestamp="1593896884306" />
-    <state width="1250" height="155" key="GridCell.Tab.0.bottom" timestamp="1594314970793">
+    <state width="1250" height="146" key="GridCell.Tab.0.bottom" timestamp="1594403892843">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="155" key="GridCell.Tab.0.bottom/0.0.1271.768@0.0.1271.768" timestamp="1594314970793" />
-    <state width="1250" height="155" key="GridCell.Tab.0.center" timestamp="1594314970793">
+    <state width="1250" height="146" key="GridCell.Tab.0.bottom/0.0.1271.768@0.0.1271.768" timestamp="1594403892843" />
+    <state width="1250" height="146" key="GridCell.Tab.0.center" timestamp="1594403892843">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="155" key="GridCell.Tab.0.center/0.0.1271.768@0.0.1271.768" timestamp="1594314970793" />
-    <state width="1250" height="155" key="GridCell.Tab.0.left" timestamp="1594314970793">
+    <state width="1250" height="146" key="GridCell.Tab.0.center/0.0.1271.768@0.0.1271.768" timestamp="1594403892843" />
+    <state width="1250" height="146" key="GridCell.Tab.0.left" timestamp="1594403892843">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="155" key="GridCell.Tab.0.left/0.0.1271.768@0.0.1271.768" timestamp="1594314970793" />
-    <state width="1250" height="155" key="GridCell.Tab.0.right" timestamp="1594314970793">
+    <state width="1250" height="146" key="GridCell.Tab.0.left/0.0.1271.768@0.0.1271.768" timestamp="1594403892843" />
+    <state width="1250" height="146" key="GridCell.Tab.0.right" timestamp="1594403892843">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="155" key="GridCell.Tab.0.right/0.0.1271.768@0.0.1271.768" timestamp="1594314970793" />
+    <state width="1250" height="146" key="GridCell.Tab.0.right/0.0.1271.768@0.0.1271.768" timestamp="1594403892843" />
     <state width="1250" height="155" key="GridCell.Tab.1.bottom" timestamp="1594314970794">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
@@ -285,16 +237,16 @@
       <screen x="0" y="0" width="1271" height="768" />
     </state>
     <state width="1250" height="155" key="GridCell.Tab.1.right/0.0.1271.768@0.0.1271.768" timestamp="1594314970793" />
-    <state x="136" y="29" width="916" height="708" key="SettingsEditor" timestamp="1594240742666">
+    <state x="136" y="29" width="916" height="708" key="SettingsEditor" timestamp="1594403600256">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
     <state x="104" y="23" width="916" height="708" key="SettingsEditor/0.0.1271.768/1366.-239.1600.870@0.0.1271.768" timestamp="1594231681539" />
     <state x="1643" y="-112" width="998" height="708" key="SettingsEditor/0.0.1271.768/1366.-239.1600.870@1366.-239.1600.870" timestamp="1594231614429" />
-    <state x="136" y="29" key="SettingsEditor/0.0.1271.768@0.0.1271.768" timestamp="1594240742666" />
-    <state x="227" y="117" key="Vcs.Push.Dialog.v2" timestamp="1594314910181">
+    <state x="136" y="29" key="SettingsEditor/0.0.1271.768@0.0.1271.768" timestamp="1594403600256" />
+    <state x="227" y="117" key="Vcs.Push.Dialog.v2" timestamp="1594394532230">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="227" y="117" key="Vcs.Push.Dialog.v2/0.0.1271.768@0.0.1271.768" timestamp="1594314910181" />
+    <state x="227" y="117" key="Vcs.Push.Dialog.v2/0.0.1271.768@0.0.1271.768" timestamp="1594394532230" />
     <state x="343" y="117" width="650" height="534" key="find.popup" timestamp="1594234193635">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
