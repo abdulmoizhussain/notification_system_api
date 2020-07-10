@@ -19,17 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ab08aff-5df5-41ee-a42e-0319c3bd1473" name="Default Changelist" comment="--added default users and semesters.">
-      <change afterPath="$PROJECT_DIR$/common/NotificationType.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/Event.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/models/Notification.py" afterDir="false" />
+    <list default="true" id="3ab08aff-5df5-41ee-a42e-0319c3bd1473" name="Default Changelist" comment="--completed schema.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/helpers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/models/Test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/startup_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/startup_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594394529186</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="--completed schema.">
+      <created>1594404284507</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1594404284507</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,7 +186,8 @@
     <MESSAGE value="--static file settings. and added bootstrap files." />
     <MESSAGE value="--added default users and semesters." />
     <MESSAGE value="--updated proper project name." />
-    <option name="LAST_COMMIT_MESSAGE" value="--updated proper project name." />
+    <MESSAGE value="--completed schema." />
+    <option name="LAST_COMMIT_MESSAGE" value="--completed schema." />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="62" key="#Inspections" timestamp="1594233914652">
@@ -205,22 +206,22 @@
       <screen x="0" y="0" width="1271" height="768" />
     </state>
     <state x="682" y="181" key="FileChooserDialogImpl/0.0.1271.768@0.0.1271.768" timestamp="1593896884306" />
-    <state width="1250" height="146" key="GridCell.Tab.0.bottom" timestamp="1594403892843">
+    <state width="1250" height="232" key="GridCell.Tab.0.bottom" timestamp="1594407293361">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="146" key="GridCell.Tab.0.bottom/0.0.1271.768@0.0.1271.768" timestamp="1594403892843" />
-    <state width="1250" height="146" key="GridCell.Tab.0.center" timestamp="1594403892843">
+    <state width="1250" height="232" key="GridCell.Tab.0.bottom/0.0.1271.768@0.0.1271.768" timestamp="1594407293361" />
+    <state width="1250" height="232" key="GridCell.Tab.0.center" timestamp="1594407293360">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="146" key="GridCell.Tab.0.center/0.0.1271.768@0.0.1271.768" timestamp="1594403892843" />
-    <state width="1250" height="146" key="GridCell.Tab.0.left" timestamp="1594403892843">
+    <state width="1250" height="232" key="GridCell.Tab.0.center/0.0.1271.768@0.0.1271.768" timestamp="1594407293360" />
+    <state width="1250" height="232" key="GridCell.Tab.0.left" timestamp="1594407293360">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="146" key="GridCell.Tab.0.left/0.0.1271.768@0.0.1271.768" timestamp="1594403892843" />
-    <state width="1250" height="146" key="GridCell.Tab.0.right" timestamp="1594403892843">
+    <state width="1250" height="232" key="GridCell.Tab.0.left/0.0.1271.768@0.0.1271.768" timestamp="1594407293360" />
+    <state width="1250" height="232" key="GridCell.Tab.0.right" timestamp="1594407293361">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state width="1250" height="146" key="GridCell.Tab.0.right/0.0.1271.768@0.0.1271.768" timestamp="1594403892843" />
+    <state width="1250" height="232" key="GridCell.Tab.0.right/0.0.1271.768@0.0.1271.768" timestamp="1594407293361" />
     <state width="1250" height="155" key="GridCell.Tab.1.bottom" timestamp="1594314970794">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
@@ -243,10 +244,10 @@
     <state x="104" y="23" width="916" height="708" key="SettingsEditor/0.0.1271.768/1366.-239.1600.870@0.0.1271.768" timestamp="1594231681539" />
     <state x="1643" y="-112" width="998" height="708" key="SettingsEditor/0.0.1271.768/1366.-239.1600.870@1366.-239.1600.870" timestamp="1594231614429" />
     <state x="136" y="29" key="SettingsEditor/0.0.1271.768@0.0.1271.768" timestamp="1594403600256" />
-    <state x="227" y="117" key="Vcs.Push.Dialog.v2" timestamp="1594394532230">
+    <state x="227" y="117" key="Vcs.Push.Dialog.v2" timestamp="1594404375805">
       <screen x="0" y="0" width="1271" height="768" />
     </state>
-    <state x="227" y="117" key="Vcs.Push.Dialog.v2/0.0.1271.768@0.0.1271.768" timestamp="1594394532230" />
+    <state x="227" y="117" key="Vcs.Push.Dialog.v2/0.0.1271.768@0.0.1271.768" timestamp="1594404375805" />
     <state x="343" y="117" width="650" height="534" key="find.popup" timestamp="1594234193635">
       <screen x="0" y="0" width="1271" height="768" />
     </state>

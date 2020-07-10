@@ -17,6 +17,7 @@ def initialize_default_values():
 # noinspection PyUnresolvedReferences
 def _create_database():
     from repository.models.User import User
+    from repository.models.Attendance import Attendance
     from repository.models.WeekDay import WeekDay
     from repository.models.TimeSlot import TimeSlot
     from repository.models.Teacher import Teacher
