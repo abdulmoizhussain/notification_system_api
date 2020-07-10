@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/flask_app.iml" filepath="$PROJECT_DIR$/.idea/flask_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/notification_system_api.iml" filepath="$PROJECT_DIR$/.idea/notification_system_api.iml" />
     </modules>
   </component>
 </project>
